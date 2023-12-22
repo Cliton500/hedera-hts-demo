@@ -14,7 +14,7 @@ ADD ./public /srv/hedera-hts-demo/public
 RUN cd /srv/hedera-hts-demo && yarn install
 RUN cd /srv/hedera-hts-demo && yarn build
 
-FROM nginx:alpine
+FROM nginx:1.25.3-alpine3.18
 
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 RUN rm -rf /usr/share/nginx/html/*
